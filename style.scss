@@ -1,0 +1,69 @@
+@import 'variables';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $fontFamily;
+}
+
+body {
+    background-color: $bodyColor;
+    form {
+        color: $formTextColor;
+        font-size: $formTextSize;
+        margin-top: 0.5rem;
+        width: 50%;
+        margin: auto;
+        background-color: $formColor;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        }
+}
+
+
+.heading {
+    background-color: $headingColor;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+           img {
+         border-radius: 20%;
+         }
+         
+    }
+
+    .questions {
+        margin-top: 0.7rem;
+        padding: 1rem;
+        margin-bottom: 0.7rem;
+        border: 1px solid white;
+        
+        .option{
+            padding: 1rem;
+            margin: 1rem;
+        }
+    }
+
+    #input {
+        padding: 1rem;
+        background-color: $formColor;
+        color: $formTextColor;
+        margin: auto;
+        margin-bottom: 1rem;
+        cursor: pointer;
+        font-weight: bold;
+        border-style: none;
+        border: 2px solid white;
+        &:hover {
+            background-color: black;
+            font-size: 1rem;
+        }
+    }
+
+   
