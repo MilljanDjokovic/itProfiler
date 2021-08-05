@@ -47,10 +47,6 @@ const timer = setInterval(() => {
     }
 }, 10);
 
-//Bold user score
-
-result.style.backgroundColor = 'green';
-
 });
 
 
