@@ -1,0 +1,73 @@
+$fontSize: 1.2rem;
+
+
+/********** START PROFILE PAGE **********/
+
+/*variables*/
+
+$backgroundColor: #edf2fb;
+$textColor: #001233;
+
+/*mixins*/
+
+@mixin buttonProfile {
+        border: 2px solid #1b4965;
+        padding: 0.5rem;   
+        background-color: $backgroundColor;
+        font-size: 0.8rem;
+        width: 100%;
+        &:hover {
+                cursor: pointer;
+                box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+                background-color: #c1d3fe;
+                font-weight: bold;
+        }
+}
+
+
+@mixin anchor {
+        color: #1b4965;
+        text-decoration: none;
+        cursor: default;
+        :hover {
+                transform: scale(1.1);
+                transition-duration: 0.3s;
+                cursor: pointer;
+        }       
+}
+
+
+/********** JSINDEX PAGE **********/
+
+@mixin button {
+        width: 50%;
+        color: #fffbeb;
+        background-color: #212529;
+        padding: 0.5rem;
+        font-size: 0.8rem;
+        text-decoration: none;
+        border-style: none;
+        align-self: center;
+        &:hover {
+                cursor: pointer;
+                border: 1px solid #fffbeb;
+                }
+                
+        }
+
+ @mixin question {
+        font-weight: bold;
+        font-size: 1rem;
+         margin-bottom: 1rem;        
+ }
+
+ @mixin anchorJS {
+        color: #fae125;
+        text-decoration: none;
+        cursor: default;
+        :hover {
+                transform: scale(1.1);
+                transition-duration: 0.3s;
+                cursor: pointer;
+        }       
+}

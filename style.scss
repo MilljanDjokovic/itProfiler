@@ -1,69 +1,304 @@
-@import 'variables';
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import "utilities";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+:root {
+    font-size: $fontSize;
+    font-family: 'Roboto', sans-serif;
+    color: $textColor;
+}
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: $fontFamily;
 }
 
-body {
-    background-color: $bodyColor;
-    form {
-        color: $formTextColor;
-        font-size: $formTextSize;
-        margin-top: 0.5rem;
-        width: 50%;
-        margin: auto;
-        background-color: $formColor;
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        }
-}
+/********** START PROFILE PROGRAMMERS INFO DIV STYLES ************/
 
-
-.heading {
-    background-color: $headingColor;
+#startProfile {
+    background-color: $backgroundColor;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    width: 100wh;
+    height: 100vh;
+    overflow: scroll;
+    }
+
+#programmers {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin: 1.5rem;
+    text-align: center;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 0.5rem;
+
+            small {
+                padding-top: 0.3rem;
+            }
+
+            &.success input {
+                border: 2px solid rgba(4, 255, 4, 0.822);
+            }
+            
+            &.error input {
+                border: 2px solid rgb(255, 51, 0);
+            }
+
+            button {
+                @include buttonProfile;
+                width: 75%;
+                align-self: center;
+                text-align: center;
+            }
+
+            h1 {
+                margin-bottom: 1rem;
+            }
+
+            input {
+                padding: 0.5rem;
+                border: 2px solid #1b4965;
+                border-radius: 5px;
+                text-align: center;
+                width: 75%;
+                align-self: center;
+
+                &:focus {
+                        background-color: #c1d3fe;
+                        color: $textColor;
+                        font-size: 0.6rem;
+                        transition-duration: 0.3s;
+                        }
+
+                &[type=checkbox] {
+                    margin-top: 0.6rem;
+                    align-self: center;
+                    zoom: 1.6;
+                }
+
+                }
+
+            i {
+                display: flex;
+                align-self: center;
+                margin-bottom: 0.5rem;
+                color: #1b4965;           
+            }
+        }      
+    }
+
+#programmerInfo{
+    @include buttonProfile;
+}
+
+/***************** PROGRAMMEING LANGUAGES STYLES **************/
+
+#programmingLanguages {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 1rem;
-           img {
-         border-radius: 20%;
-         }
-         
-    }
-
-    .questions {
-        margin-top: 0.7rem;
-        padding: 1rem;
-        margin-bottom: 0.7rem;
-        border: 1px solid white;
+    margin: 1.5rem;
         
-        .option{
-            padding: 1rem;
+        div {
+            margin-bottom: 1rem;
+
+                h1 {
+                    margin-bottom: 1rem;
+                }
+
+                p {
+                    margin-bottom: 1rem;
+                }
+
+                a {
+                    @include anchor;
+                    flex-wrap: wrap;
+                        i {
+                            padding: 0.5rem;
+                            margin: 0.5rem;
+                        }
+                }
+        }
+}
+
+/******************************** JS PART STYLES**********************************/
+
+.backToStart {
+    display: none;
+    }
+
+    #jsIndex {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        background-color: #212529;
+        
+        #js{
             margin: 1rem;
+            color: #fffbeb;
+
+        }
+
+        div {
+            margin-bottom: 1rem;
+                
+                img {
+                    border-radius: 25%;
+                }
+            
+            a {
+                @include anchorJS;
+            }
+        }
+        .question {
+            @include question;
+        }
+
+        .jsForm {
+            display: flex;
+            flex-direction: column;
+            text-align: start;
+            //align-items:flex-start;
+            width: 60%;
+            color: #fffbeb;
+            padding: 1rem;
+            border: 2px solid #fffbeb;
+            background-color: #393e41;
+            margin-bottom: 1rem;                
+               
+                p {
+                    text-align: center;
+                }
+            
+                #input {
+                    @include button;
+                }
+
+                input[type=radio] {
+                    zoom: 1.3;
+                }
+
+                .questions {
+                    border-bottom: 1px solid #fffbeb ;
+                }
+            }
+}
+
+
+/********************* MEDIA QUERIES **********************/
+
+@media only screen and (max-width: 800px) {
+    #programmers{
+        font-size: 0.9rem;
+        margin: 0.5rem;
+    }
+
+    #instruction {
+        font-size: 0.9rem;
+    }
+    #formDiv {
+        font-size: 0.9rem;
+    }
+
+    #programmingLanguages {
+        margin: 0.3rem;
+        padding-top: 0.5rem;
+        justify-content: flex-start;
+
+        #instruction {
+            margin-bottom: 0.3rem;
+
+            h1 {
+                margin-bottom: 0.3rem;
+            }
+            p {
+                margin-bottom: 0.3rem;
+            }
         }
     }
 
-    #input {
-        padding: 1rem;
-        background-color: $formColor;
-        color: $formTextColor;
-        margin: auto;
-        margin-bottom: 1rem;
-        cursor: pointer;
-        font-weight: bold;
-        border-style: none;
-        border: 2px solid white;
-        &:hover {
-            background-color: black;
-            font-size: 1rem;
+
+  }
+
+  @media only screen and (max-width: 450px) {
+
+    #startProfile {
+        flex-wrap: wrap;
+        #programmers {
+            flex: auto;
         }
     }
 
-   
+    #welcome {
+        font-size: 0.8rem;
+    }
+    #instruction {
+        font-size: 0.8rem;
+    }
+
+    #formDiv {
+        font-size: 0.8rem;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 0.3rem;
+
+            &.success input {
+                border: 1px solid rgba(4, 255, 4, 0.822);
+            }
+            
+            &.error input {
+                border: 1px solid rgb(255, 51, 0);
+            }
+
+            button {
+               width: 75%;
+               align-self: center;
+               padding: 0.2rem;
+               font-size: 0.8rem;
+            }
+
+            h1 {
+                margin-bottom: 0.3rem;
+            }
+
+            input {
+                padding: 0.2rem;
+                border: 1px solid #1b4965;
+                border-radius: 5px;
+                text-align: center;
+                font-size: 0.6rem;
+
+                &[type=checkbox] {
+                    margin-top: 0.6rem;
+                    align-self: center;
+                    zoom: 1.1;
+                }
+
+             }
+
+             p {
+                 font-size: 0.6rem;
+             }
+        }    
+    }
+}
+
+
+@media only screen and (max-width: 900px) {
+    #jsIndex .jsForm {
+      width: 90%;
+      margin: 0.5rem;;
+      font-size: 0.8rem;
+            .question {
+            font-weight: normal;
+            }
+        }
+    }

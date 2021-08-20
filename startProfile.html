@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <title>Welcome to It Profiler</title>
+</head>
+
+<body>
+    <section id="startProfile">
+        <div id="programmers">
+            <div id="welcome">
+                <h1>Welcome to our IT company!</h1>
+                <p>This is a beginning of selection process. Please, fill in the form below and submit Your answers!</p>
+            </div>
+            <div id="formDiv">
+                <form id="infoForm">
+                    <div class="">
+                        <i class="fas fa-user fa-2x"></i>
+                        <input type="text" id="name" placeholder="Enter Your name">
+                        <small class="message"></small>
+                    </div>
+                    <div class="">
+                        </label><i class="far fa-user fa-2x"></i>
+                        <input type="text" id="surname" placeholder="Enter Your surname">
+                        <small class="message"></small>
+                    </div>
+                    <div class="">
+                        <i class="fas fa-envelope fa-2x"></i>
+                        <input type="text" id="e-mail" placeholder=" Enter Your e-mail">
+                        <small class="message"></small>
+                    </div>
+                    <div class="">
+                        <p>All shared info will be used only in purpose of selection process and will remain private
+                            according to law.
+                        </p>
+                            <input type="checkbox" id="checkbox" value ="agree" checked>
+                            <small class="message"></small>
+                    </div>
+                    <div>
+                        <button id="programmerInfo" type="submit" value="Submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div id="programmingLanguages">
+                <div id="instruction">
+                    <h1>In front of You, there are several programming languages represented by following icons.</h1>
+                    <p>Each icon represents a test of knowledge of a specific programming language.</p>
+                    <p>Test time duration varies depending of programming language. You will be able to see it on Your UI when the test starts.</p>
+                    <p>Whenever You feal ready to start the knowlege test, please select one of the icons below.</p>
+                </div>
+                <div id="icons">
+                        <!-- <a href=""><i class="fab fa-html5 fa-3x"></i></a> -->
+                        <a href="./jsPart/jsIndex.html"><i class="fab fa-js-square fa-4x"></i></a>
+                        <!-- <a href=""><i class="fab fa-css3-alt fa-3x"></i></a>         
+                        <a href=""><i class="fab fa-react fa-3x"></i></a>
+                        <a href=""><i class="fab fa-angular fa-3x"></i></a>             
+                        <a href=""><i class="fab fa-java fa-3x"></i></a>
+                        <a href=""><i class="fab fa-python fa-3x"></i></a> -->
+                </div>
+    </section>
+</body>
+<script src="formValidation.js"></script>
+</html>

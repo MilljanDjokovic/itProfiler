@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="/css/style.css">
+    <title>itProfiler</title>
+</head>
+
+<body>
+    <section id="jsIndex">
+
+        <div id="js">
+            <div>
+                <img src="/jpg/jsLogo.jpg" alt="JavaSript" height="120px">
+            </div>
+            <div>
+                <h1>Welcome to jsQuestionnaire! <br> Check Your knowledge of JavaScript.</h1>
+                <br>
+            </div>
+            <div id="showOutput" class="backToStart">
+                <h1>Your jsKnowlegeScore is : <br><span id='result'></span> points.</h1>
+            </div>
+            <div id="back" class="backToStart">
+                <a href="/startProfile.html"><i class="far fa-arrow-alt-circle-left fa-3x"></i></a>
+            </div>
+            <div>
+                <p id="timer"></p>
+            </div>
+        </div>
+    
+        <!--JS Question form-->
+    
+        <form id='questionForm' class="jsForm">
+            <!--First question-->
+            <div class="questions">
+                <p class = "question">1. What is 'this' keyword in JavaScript?</p>
+                <div class="option">
+                    <label>'This' keyword refers to the object from where it was called.</label>
+                    <input type="radio" name="Q1" value="A" checked>
+                </div>
+                <div div class="option">
+                    <label>This keyword doesn't exist.</label>
+                    <input type="radio" name="Q1" value="B">
+                </div>
+            </div>
+    
+            <!--Second question-->
+    
+            <div class="questions">
+                <p class = "question">2. What is === operator?</p>
+                <div class="option">
+                    <label>=== is called a strict equality operator, which returns true when the two operands have the same value without conversion.</label>
+                    <input type="radio" name="Q2" value="A" checked>
+                </div>
+                <div div class="option">
+                    <label>It is ternary operator.</label>
+                    <input type="radio" name="Q2" value="B">
+                </div>
+            </div>
+            <!--Third question-->
+    
+            <div class="questions">
+                <p class = "question">3. Does JavaScript support automatic type conversion?</p>
+                <div div class="option">
+                    <label>Yes</label>
+                    <input type="radio" name="Q3" value="A" checked>
+                </div>
+                <div div class="option">
+                    <label>No</label>
+                    <input type="radio" name="Q3" value="B">
+                </div>
+            </div>
+    
+            <!--Forth question-->
+    
+            <div class="questions">
+                <p class = "question">4. What do you mean by NULL in Javascript?</p>
+                <div div class="option">
+                    <label>The NULL value is used to represent no value or no object. It implies no object or null string, no valid boolean value, no number, and no array object.</label>
+                    <input type="radio" name="Q4" value="A" checked>
+                </div>
+                <div div class="option">
+                    <label>It is used to represent stored values.</label>
+                    <input type="radio" name="Q4" value="B">
+                </div>
+            </div>
+    
+            <!--Fifth question-->
+    
+            <div class="questions">
+                <p class = "question">5. What is a pop()method in JavaScript is?</p>
+                <div class="option">
+                    <label>The pop() method takes the last element off of the given array and returns it.</label>
+                    <input type="radio" name="Q5" value="A" checked>
+                </div>
+                <div div class="option">
+                    <label>This method adds item into the start of an array.</label>
+                    <input type="radio" name="Q5" value="B">
+                </div>
+            </div>
+            
+            <!--Submit answers-->
+    
+            <input id="input" type="submit" value="Submit">
+        </form>
+        
+    </section>
+    
+
+</body>
+<script src="app.js"></script>
+</html>
